@@ -1,0 +1,48 @@
+public class Alternativ2 {
+  public static void skrivKarakterprotokoll(int[] poeng) {
+    // Metoden skrivKarakterprotokoll begynner her
+    int kandidatnummer = 0;
+    while (kandidatnummer < poeng.length) {
+    // If statements nedover for å sjekke kandidatnummer og poengsummen
+    if (poeng[kandidatnummer] < 0 || poeng[kandidatnummer] > 40) {
+      System.out.println("\nUgyldig poengsum.");
+      kandidatnummer++;
+    }
+
+    else if (poeng[kandidatnummer] <= 15) {
+      System.out.println("\nKandidatnummer " + kandidatnummer + " fikk karakteren F.");
+      kandidatnummer++;
+    }
+
+    else if (poeng[kandidatnummer] <= 17) {
+      System.out.println("\nKandidatnummer " + kandidatnummer + " fikk karakteren E.");
+      kandidatnummer++;
+    }
+
+    else if (poeng[kandidatnummer] <= 22) {
+      System.out.println("\nKandidatnummer " + kandidatnummer + " fikk karakteren D.");
+      kandidatnummer++;
+    }
+
+    else if (poeng[kandidatnummer] <= 30) {
+      System.out.println("\nKandidatnummer " + kandidatnummer + " fikk karakteren C.");
+      kandidatnummer++;
+    }
+
+    else if (poeng[kandidatnummer] <= 35) {
+      System.out.println("\nKandidatnummer " + kandidatnummer + " fikk karakteren B.");
+      kandidatnummer++;
+    }
+
+    else if (poeng[kandidatnummer] <= 40) {
+      System.out.println("\nKandidatnummer " + kandidatnummer + " fikk karakteren A.");
+      kandidatnummer++;
+    }
+  }
+}
+  public static void main (String[] args) { // Main metoden
+    int[] poeng = new int[] {38, 12, 27, 20, 33, 16, -3, 56}; // Deklarasjoner
+    skrivKarakterprotokoll(poeng);
+    // Kaller på skrivKarakterprotokoll metoden.
+  }
+}
