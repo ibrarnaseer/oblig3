@@ -1,0 +1,27 @@
+import java.util.*;
+public class MinOppgave3 {
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int parTall = 0;
+    int oddeTall = 0;
+    System.out.println("Tast inn nummer:\nAvslutt ved aa taste inn -1.");
+    // Tekst for å fortelle deg hva du skal gjøre
+    while (true) {
+      int nummerLestInn = Integer.parseInt(in.nextLine());
+      // Deklarasjoner
+      if (nummerLestInn % 2 == 1) {
+        oddeTall++;
+      } // If-løkke for å telle oddetall
+      else if (nummerLestInn % 2 == 0) {
+        parTall++;
+      } // If-løkke for å telle partall
+      if (nummerLestInn == -1) {
+      // If-løkke for å se når brukeren har tastet inn -1 og avslutter programmet
+        System.out.println("Det var " + parTall + " partall du tastet inn.");
+        System.out.println("Det var " + oddeTall + " oddetall du tastet inn.");
+        // Forteller hvor mange antall det var av hver
+        break; // Avslutter programmet
+      }
+    }
+  }
+}
