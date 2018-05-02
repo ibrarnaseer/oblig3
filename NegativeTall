@@ -1,0 +1,18 @@
+public class NegativeTall {
+  public static void main(String[] args) {
+    int[] heltall = new int[] {1, 4, 5, -2, -4, 6, 10, 3, -2};
+    int teller = 0;
+    int negativTallTeller = 0;
+    int sum = 0; // Deklarasjoner
+    while (teller < heltall.length) {
+      if (heltall[teller] < 0) {
+      // If-løkke for å sjekke om tallet er mindre enn 0
+        sum += heltall[teller];
+        negativTallTeller++;
+      }
+      teller++;
+    }
+    System.out.println("Det er " + negativTallTeller + " negative tall i arrayet.");
+    // Printer ut en liten tekst og hvor mange negative tall det er 
+  }
+}
